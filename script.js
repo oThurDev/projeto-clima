@@ -50,3 +50,23 @@ function showInfo(json) {
 function showWarning(message) {
     document.querySelector(".aviso").innerHTML = message
 }
+
+var agora = new Date();
+var hora = agora.getHours();
+
+var saudacao;
+var backgroundImage;
+
+    if (hora >= 5 && hora < 12) {
+        saudacao = "Bom dia!";
+        backgroundImage = "url('./imgs/bom-dia.jpg')"
+    } else if (hora >= 12 && hora < 18) {
+        saudacao = "Boa tarde!";
+        backgroundImage = "url('./imgs/boa-tarde.jpg')"
+    } else {
+        saudacao = "Boa noite!";
+        backgroundImage = "url('./imgs/boa-noite.jpg')"
+    }
+
+document.querySelector(".greetings").innerHTML = saudacao;
+document.body.style.backgroundImage = backgroundImage;
