@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     background-color: #333;
     font-family: Arial, Helvetica, sans-serif;
-    background-position: center;
+    background-size: cover;
 }
 
 h1 {

@@ -53,6 +53,11 @@ function showWarning(message) {
 
 var agora = new Date();
 var hora = agora.getHours();
+var min = agora.getMinutes()
+
+if (min >= 0 | min <= 10) {
+    min = `0${min}`
+}
 
 var saudacao;
 var backgroundImage;
@@ -61,7 +66,7 @@ var backgroundImage;
         saudacao = "Bom dia!";
         backgroundImage = "url('./imgs/bom-dia.jpg')"
     } else if (hora >= 12 && hora < 18) {
-        saudacao = "Boa tarde!";
+        saudacao = `Boa tarde! - ${hora}:${min}`;
         backgroundImage = "url('./imgs/boa-tarde.jpg')"
     } else {
         saudacao = "Boa noite!";
