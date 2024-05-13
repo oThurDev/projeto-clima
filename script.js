@@ -55,7 +55,7 @@ var agora = new Date();
 var hora = agora.getHours();
 var min = agora.getMinutes()
 
-if (min >= 0 | min <= 10) {
+if (min >= 0 & min <= 10) {
     min = `0${min}`
 }
 
